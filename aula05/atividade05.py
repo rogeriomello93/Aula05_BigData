@@ -1,21 +1,21 @@
-numero = float(input('Escolha um numero qualquer: '))
+num = float(input('Escolha um numero qualquer: '))
 
-if numero >0:
-    print(f'O número {numero} é positivo')
+if num>0:
+    print(f'O número {num} é positivo')
 
-elif numero == 0:
-    print(f'O número é zero!')
+elif num == 0:
+    print(f'O número é neutro!')
 
 else:
-    print(f'O número {numero} é negativo')
+    print(f'O número {num} é negativo')
 
 
-('''
-[1] - Positivo
-[2] - Negativo
-[3] - Zero
-''')
+match num:
+    case num if num >0:
+        print(f'O número {num} é positivo')
+    case num if num <0:
+        print(f'O número {num} é negativo')
+    case _:
+        print(f'O número {num} é neutro')
 
-match numero:
-    case 1:
-        print() 
+ 
